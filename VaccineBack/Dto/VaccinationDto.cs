@@ -1,16 +1,19 @@
-public class CreateVaccinationDTO;
-{   
-    public Guid PersonId {get; set;}
-    public Guid VaccineId {get; set;}
-    public int DoseNumber {get; set;}
-    public string Name { get; set; }
+namespace VaccinationDto 
+{
+    
+public record class CreateVaccinationDTO
+(
+    Guid PersonId,
+    Guid VaccineId,
+    int DoseNumber,
+    string Name
+);
+
+public record class GetVaccinationDTO
+(
+     Guid Id,
+     int DoseNumber, 
+     string Name,
+     DateOnly Date
+);
 }
-
-public class GetVaccinationDTO;
-{   
-    public Guid Id {get; set;}
-    public int DoseNumber {get; set;}
-    public string Name { get; set; }
-    public DateOnly Date {get; set;}
-}   
-
