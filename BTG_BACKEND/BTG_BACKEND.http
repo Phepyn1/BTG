@@ -1,0 +1,6 @@
+@BTG_BACKEND_HostAddress = http://localhost:5238
+
+GET {{BTG_BACKEND_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
