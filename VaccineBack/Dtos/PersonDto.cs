@@ -1,12 +1,11 @@
-namespace PersonDto
-{
+namespace VaccineBack.Dto.person;
+
   public record class CreatePersonDto(
-        string Name
+     string Name
   );
 
-  public record class GetPersonDto
+  public record class PersonResponseDto
   (
         Guid Id,
         string Name 
   );
-};

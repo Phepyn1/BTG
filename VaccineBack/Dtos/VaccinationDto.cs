@@ -1,4 +1,4 @@
-namespace VaccinationDto 
+namespace VaccineBack.Dto.Vaccination
 {
     
 public record class CreateVaccinationDTO
@@ -9,7 +9,7 @@ public record class CreateVaccinationDTO
     string Name
 );
 
-public record class GetVaccinationDTO
+public record class VaccinationResponseDTO
 (
      Guid Id,
      int DoseNumber, 
