@@ -1,2 +1,22 @@
-@import "tailwindcss"
+  @import "tailwindcss";
+  
 
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* trilho */
+  ::-webkit-scrollbar-track {
+    background: #E5E7EB; /* cinza claro */
+  }
+
+  /* thumb (a parte que mexe) */
+  ::-webkit-scrollbar-thumb {
+    background: #1E40AF; /* azul tailwind: blue-800 */
+    border-radius: 4px;
+  }
+
+  /* hover no thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1E3A8A; /* azul mais escuro */
+  }

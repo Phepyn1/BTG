@@ -12,14 +12,14 @@ export default function PersonPage()
     
 
     useEffect(() => {
-      const data = PersonService.list().then((data) => {
+      PersonService.list().then((data) => {
       setPerson(data)
       })
       .finally(() => setLoading(false));
     }, [])
    if (loading) return <p>Carregando...</p>
   
-  
+    
    const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setShowSuccess(true);
@@ -99,28 +99,29 @@ export default function PersonPage()
           </div>
         </div>
          <div className="lg:col-span-1">
-          <div className="bg-[#F8F9FA] border-2 border-[#DEE2E6] p-6">
-            <h4 className="mb-6">Registered Persons</h4>
-            
-            {persons.length === 0 ? (
-              <p className="text-[#6C757D]">No persons registered yet</p>
-            ) : (
-              <div className="space-y-3">
-                {persons.slice(-5).reverse().map((person) => (
-                  <div key={person.id} className="bg-white p-4 border border-[#DEE2E6]">
+        <div className="bg-[#f8f9fad0] border-2 border-[#DEE2E6] p-6">
+          <h4 className="mb-6">Registered Persons</h4>
+
+          {persons.length === 0 ? (
+            <p className="text-[#6C757D]">No persons registered yet</p>
+          ) : (
+            <div className="space-y-3 h-90 overflow-y-auto pr-2"> 
+              {persons
+                .slice()       // copia
+                .reverse()     // mais recentes primeiro
+                .map((person) => (
+                  <div
+                    key={person.id}
+                    className="bg-white p-4 border border-[#DEE2E6]"
+                  >
                     <p className="mb-1">{person.name}</p>
                     <p className="text-[#6C757D]">ID: {person.id}</p>
                   </div>
                 ))}
-                {persons.length > 5 && (
-                  <p className="text-[#6C757D] text-center pt-2">
-                    +{persons.length - 5} more
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
+      </div>
       </div>
     </div>
   );}

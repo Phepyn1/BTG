@@ -4,7 +4,7 @@ export function Header() {
   const navItems = [
     { id: '/', label: 'Home' },
     { id: 'persons', label: 'Register Person' },
-   
+    { id: 'vaccine', label: 'Register Vaccine'},
   ];
   const location = useLocation();
 

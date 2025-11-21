@@ -5,7 +5,7 @@ import ApiClient from "../util/ApiClient"
 
 
 const client = new ApiClient()
-const endpoint = '/person';
+const endpoint = 'api/person';
 
 
 export class PersonService{
