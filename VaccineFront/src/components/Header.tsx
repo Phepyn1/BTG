@@ -27,10 +27,10 @@ export function Header() {
           {navItems.map((item) => (
             <Link
               to = {item.id}
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`px-8 py-2 rounded-2px text-2xl  transition-colors ${
                 isActive(item.id)
-                  ? 'bg-blue-100 text-blue-700'
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-100'
+                  ? 'bg-[#307ae0] text-white'
+                  : 'text-blue-100 hover:text-white hover:bg-blue-600'
               }`}
             >
 

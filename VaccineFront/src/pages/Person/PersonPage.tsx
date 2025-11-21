@@ -1,10 +1,30 @@
 import {UserIcon , CheckIcon} from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type { Person } from "../../Interfaces/PersonsI";
+import { PersonService } from "../../Services/PersonService";
 
 export default function PersonPage()
 {
 
-    const [showSuccess] = useState(false);
+  const [persons, setPerson] = useState<Person[]>([]);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [loading, setLoading] = useState(true)
+    
+
+    useEffect(() => {
+      const data = PersonService.list().then((data) => {
+      setPerson(data)
+      })
+      .finally(() => setLoading(false));
+    }, [])
+   if (loading) return <p>Carregando...</p>
+  
+  
+   const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 3000);
+  };
     return (
       <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="mb-12">
@@ -14,11 +34,9 @@ export default function PersonPage()
         </p>
       </div>
 
-      {/* Decorative stripe */}
-      <div className="h-1 w-24 bg-gradient-to-r from-[#307AE0] to-[#549CFF] mb-12"></div>
+      <div className="h-1 w-24 bg-linear-to-r from-[#307AE0] to-[#549CFF] mb-12"></div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        {/* Form Section */}
         <div className="lg:col-span-2">
           <div className="bg-white border-2 border-[#DEE2E6] p-8">
             <div className="flex items-center gap-4 mb-8">
@@ -28,7 +46,7 @@ export default function PersonPage()
               <h3>Personal Information</h3>
             </div>
 
-            <form  className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8">
               <div>
                 <label htmlFor="personName" className="block mb-3">
                   Person Name
@@ -36,7 +54,7 @@ export default function PersonPage()
                 <input
                   id="personName"
                   type="text"
-                  value={'nome'}
+                  onChange={(e) => (e.target.value)}
                   className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors"
                   placeholder="Enter full name"
                   required
@@ -80,7 +98,31 @@ export default function PersonPage()
             )}
           </div>
         </div>
+         <div className="lg:col-span-1">
+          <div className="bg-[#F8F9FA] border-2 border-[#DEE2E6] p-6">
+            <h4 className="mb-6">Registered Persons</h4>
+            
+            {persons.length === 0 ? (
+              <p className="text-[#6C757D]">No persons registered yet</p>
+            ) : (
+              <div className="space-y-3">
+                {persons.slice(-5).reverse().map((person) => (
+                  <div key={person.id} className="bg-white p-4 border border-[#DEE2E6]">
+                    <p className="mb-1">{person.name}</p>
+                    <p className="text-[#6C757D]">ID: {person.id}</p>
+                  </div>
+                ))}
+                {persons.length > 5 && (
+                  <p className="text-[#6C757D] text-center pt-2">
+                    +{persons.length - 5} more
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
-  );
-}
+  );}
+  
+
