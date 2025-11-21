@@ -8,7 +8,7 @@ public static class PersonRoute
 {
     public static void PersonRoutes(this WebApplication app)
     {
-        var route = app.MapGroup("person");
+        var route = app.MapGroup("api/person");
 
         route.MapGet("",() =>
         {
