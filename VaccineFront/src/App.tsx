@@ -1,17 +1,25 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
+import { BrowserRouter} from 'react-router-dom'
 import Router from './Router'
+import Footer from './components/Footer';
+import { Header } from './components/Header';
 
 
 function App() {
   
+return(
+   <BrowserRouter>  
+      <div className="min-h-screen ">
+        <Header />
+        
+        <main>
+          <Router/>
+        </main>
 
- return (
-    <BrowserRouter>
-        <Router />
+        <Footer/>
+        
+      </div>
     </BrowserRouter>
-  );
+);
 }
-
 export default App

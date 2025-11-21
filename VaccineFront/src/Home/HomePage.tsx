@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="mb-16">
-        <h2 className="mb-4">BTG VACINAS</h2>
+        <h2 className="mb-4 text-[#001e62]">Vaccination Card System</h2>
         <p className="text-[#6C757D] max-w-2xl">
           A comprehensive system for managing vaccination records with enterprise-grade security and reliability.
           Register individuals, vaccines, and maintain complete vaccination history.

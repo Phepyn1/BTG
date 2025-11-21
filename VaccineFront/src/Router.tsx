@@ -1,14 +1,15 @@
-import { Navigate, Outlet, Route, Routes} from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 import HomePage from './Home/HomePage'
+import PersonPage from './Person/PersonPage';
 
 
 
 
 const Router = () => {
-    console.log("HOME")
     return(
     <Routes>    
     <Route path="/" element={<HomePage />}/>
+    <Route path='/persons' element={<PersonPage/>}/>
     </Routes>
 )};
 
