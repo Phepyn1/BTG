@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C7A3A636-3A2F-49AC-B2AD-AAB336F0ABB1}|BTG.Backend.Tests\\BTG.Backend.Tests.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\btg.backend.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7A3A636-3A2F-49AC-B2AD-AAB336F0ABB1}|BTG.Backend.Tests\\BTG.Backend.Tests.csproj|solutionrelative:btg.backend.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BBD632B2-C8E0-5575-BE68-C7C0C2B42B60}|VaccineBack\\BTG_BACKEND.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccineback\\controller\\vaccinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBD632B2-C8E0-5575-BE68-C7C0C2B42B60}|VaccineBack\\BTG_BACKEND.csproj|solutionrelative:vaccineback\\controller\\vaccinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\BTG.Backend.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "BTG.Backend.Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\BTG.Backend.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "BTG.Backend.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T14:55:35.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "VaccineController.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBack\\Controller\\VaccineController.cs",
               "RelativeDocumentMoniker": "VaccineBack\\Controller\\VaccineController.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBack\\Controller\\VaccineController.cs",
               "RelativeToolTip": "VaccineBack\\Controller\\VaccineController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T04:49:01.043Z",
               "EditorCaption": ""

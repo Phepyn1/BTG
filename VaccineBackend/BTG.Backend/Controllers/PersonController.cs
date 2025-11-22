@@ -21,7 +21,7 @@ public static class PersonRoute
         route.MapPost("",  async (CreatePersonDto personDto, PersonService service) =>
         {
            var createPerson = await service.CreatePerson(personDto);
-            return  Results.Created($"/person/{createPerson.Id}", createPerson) ;
+            return  Results.Created($"/person/{createPerson.Id}", createPerson) ;   
         });
         
         route.MapDelete("{id:guid}", async (Guid id, PersonService service) =>
