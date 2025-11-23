@@ -1,7 +1,6 @@
 namespace BTG.Backend.Controller;
 
-using System.Reflection.Metadata.Ecma335;
-using Microsoft.VisualBasic;
+
 using VaccineBack.Dto.person;
 using BTG.Backend.Services;
 public static class PersonRoute

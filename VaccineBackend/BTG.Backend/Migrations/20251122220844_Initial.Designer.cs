@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BTG.Backend.Migrations
 {
-    [DbContext(typeof(PersonContext))]
+    [DbContext(typeof(BTGContext))]
     [Migration("20251122220844_Initial")]
     partial class Initial
     {

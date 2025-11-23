@@ -1,42 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿namespace BTG.Backend.Controller;
 
 
-namespace BTG.Backend.Controller
+using VaccineBack.Dto.Vaccine;
+using BTG.Backend.Services;
+public static class VaccineRoute
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class VaccineController : ControllerBase
+
+  
+    public static void VaccineRoutes(this WebApplication app)
     {
-        // GET: api/<VaccineController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        var route = app.MapGroup("api/vaccine");
 
-        // GET api/<VaccineController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        route.MapGet("",async (VaccineService service) =>
         {
-            return "value";
-        }
+            List<VaccineResponseDto> VaccinesList = await service.GetVaccines();
+            if(!VaccinesList.Any()){return Results.BadRequest("Lista vazia!");}
+            return Results.Ok(VaccinesList);   
+        });
 
-        // POST api/<VaccineController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        route.MapPost("",  async (CreateVaccineDto VaccineDto, VaccineService service) =>
         {
-        }
+           var createVaccine = await service.CreateVaccine(VaccineDto);
+            return  Results.Created($"/vaccine/{createVaccine.Id}", createVaccine) ;   
+        });
+        
+        route.MapDelete("{id:guid}", async (Guid id, VaccineService service) =>
+        {
+            var deleted = await service.DeleteVaccine(id);
+            return deleted
+        ? Results.NoContent()
+            : Results.NotFound("Vaccine not found");
+        });
 
-        // PUT api/<VaccineController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
 
-        // DELETE api/<VaccineController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
+    
 }

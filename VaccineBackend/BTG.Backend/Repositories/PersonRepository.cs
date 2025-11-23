@@ -1,16 +1,15 @@
 ﻿using BTG.Backend.Data;
 using BTG.Backend.entites;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Runtime.InteropServices;
+
 
 namespace BTG.Backend.Repositories;
 
     public class PersonRepository : IPersonRepository
     {
-        private readonly PersonContext _context;
+        private readonly BTGContext _context;
 
-    public PersonRepository(PersonContext context)
+    public PersonRepository(BTGContext context)
     {
         _context = context;
     }

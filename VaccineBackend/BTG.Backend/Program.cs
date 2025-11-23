@@ -7,9 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<VaccineService>();
 builder.Services.AddScoped<PersonService>();
-builder.Services.AddScoped<PersonContext>();
+builder.Services.AddScoped<BTGContext>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<IVaccineRepository, VaccineRepository>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
@@ -28,6 +31,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.PersonRoutes();
+app.VaccineRoutes();
 app.Run();
 
 

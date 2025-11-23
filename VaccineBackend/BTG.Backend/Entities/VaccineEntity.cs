@@ -1,8 +1,8 @@
 namespace BTG.Backend.entites;
 
-public class ModelPerson
+public class ModelVaccine
 {
-    public ModelPerson(string name, string uniqueID)
+    public ModelVaccine(string name, string uniqueID)
     {
         Id = Guid.NewGuid();
         Name = name;
