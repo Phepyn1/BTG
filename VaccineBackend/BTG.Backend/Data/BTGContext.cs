@@ -8,6 +8,7 @@ namespace BTG.Backend.Data;
     {
        public DbSet<ModelPerson> person { get; set; }
        public DbSet<ModelVaccine> Vaccine { get; set; }
+       public DbSet<ModelVaccination> Vaccination { get; set; } 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

@@ -15,6 +15,22 @@ namespace BTG.Backend.Repositories;
     }
     public async Task<List<ModelPerson>> GetAll() => await _context.person.ToListAsync();
 
+    public async Task<ModelPerson?> FindByUniqueId(string UniqueId)
+    {
+        var person = await _context.person.FirstOrDefaultAsync(p => p.UniqueID == UniqueId);
+        if (person is null)
+            return null;
+        return person;
+    }
+
+    public async Task<ModelPerson?> FindById(Guid id)
+    {
+        var person = await _context.person.FirstOrDefaultAsync(p => p.Id == id);
+        if (person is null)
+            return null;
+        return person;
+    }
+
     public async Task<ModelPerson> SetPerson(ModelPerson person)
     {
          _context.Add(person);

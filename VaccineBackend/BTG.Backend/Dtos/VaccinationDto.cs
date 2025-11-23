@@ -1,19 +1,17 @@
-namespace VaccineBack.Dto.Vaccination
-{
-    
+namespace VaccineBack.Dto.Vaccination;
+
+
 public record class CreateVaccinationDTO
 (
-    Guid PersonId,
-    Guid VaccineId,
-    int DoseNumber,
-    string Name
+Guid PersonId,
+Guid VaccineId,
+Guid DoseId
 );
 
 public record class VaccinationResponseDTO
 (
-     Guid Id,
-     int DoseNumber, 
-     string Name,
-     DateOnly Date
+ Guid Id,
+ string Dose,   
+ DateOnly Date,
+ string VaccineName
 );
-}

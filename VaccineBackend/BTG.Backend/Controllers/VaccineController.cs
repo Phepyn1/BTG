@@ -1,4 +1,4 @@
-﻿namespace BTG.Backend.Controller;
+﻿namespace BTG.Backend.Controllers;
 
 
 using VaccineBack.Dto.Vaccine;
@@ -31,7 +31,6 @@ public static class VaccineRoute
         ? Results.NoContent()
             : Results.NotFound("Vaccine not found");
         });
-
 
     }
     

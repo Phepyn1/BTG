@@ -1,4 +1,4 @@
-using BTG.Backend.Controller;
+using BTG.Backend.Controllers;
 using BTG.Backend.Data;
 using BTG.Backend.Repositories;
 using BTG.Backend.Services;
@@ -9,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<VaccineService>();
 builder.Services.AddScoped<PersonService>();
+builder.Services.AddScoped<VaccinationService>();
 builder.Services.AddScoped<BTGContext>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IVaccineRepository, VaccineRepository>();
@@ -32,6 +33,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.PersonRoutes();
 app.VaccineRoutes();
+app.VaccinationRoutes();
 app.Run();
 
 

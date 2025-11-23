@@ -1,4 +1,4 @@
-namespace BTG.Backend.Controller;
+namespace BTG.Backend.Controllers;
 
 
 using VaccineBack.Dto.person;
@@ -21,6 +21,8 @@ public static class PersonRoute
         route.MapPost("",  async (CreatePersonDto personDto, PersonService service) =>
         {
            var createPerson = await service.CreatePerson(personDto);
+           if (createPerson == null)
+                return Results.Conflict(new { message = "UniqueKey já cadastrada" });
             return  Results.Created($"/person/{createPerson.Id}", createPerson) ;   
         });
         

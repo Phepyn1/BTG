@@ -23,9 +23,11 @@ public class PersonService
         .ToList(); 
     }
 
-    public async Task<PersonResponseDto> CreatePerson(CreatePersonDto dto)
+    public async Task<PersonResponseDto?> CreatePerson(CreatePersonDto dto)
     {
         ModelPerson newPerson = new ModelPerson(dto.Name,dto.UniqueID);
+        if (await _repository.FindByUniqueId(dto.UniqueID) != null)
+            return null;
         var _save = await _repository.SetPerson(newPerson);
 
         return new PersonResponseDto(newPerson.Id, newPerson.Name,newPerson.UniqueID);

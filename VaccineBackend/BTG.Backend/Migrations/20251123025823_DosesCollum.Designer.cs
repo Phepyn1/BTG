@@ -3,6 +3,7 @@ using System;
 using BTG.Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BTG.Backend.Migrations
 {
     [DbContext(typeof(BTGContext))]
-    partial class PersonContextModelSnapshot : ModelSnapshot
+    [Migration("20251123025823_DosesCollum")]
+    partial class DosesCollum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.0");
@@ -34,29 +37,6 @@ namespace BTG.Backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("person");
-                });
-
-            modelBuilder.Entity("BTG.Backend.entites.ModelVaccination", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateOnly>("Date")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("DoseId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("PersonId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("VaccineId")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Vaccination");
                 });
 
             modelBuilder.Entity("BTG.Backend.entites.ModelVaccine", b =>

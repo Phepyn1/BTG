@@ -19,16 +19,16 @@ public class VaccineService
 
 
         return Vaccines
-        .Select(p => new VaccineResponseDto(p.Id, p.Name, p.UniqueID))
+        .Select(p => new VaccineResponseDto(p.Id, p.Name, p.UniqueID,p.Doses))
         .ToList(); 
     }
 
     public async Task<VaccineResponseDto> CreateVaccine(CreateVaccineDto dto)
     {
-        ModelVaccine newVaccine = new ModelVaccine(dto.Name,dto.UniqueID);
+        ModelVaccine newVaccine = new ModelVaccine(dto.Name,dto.UniqueID,dto.Doses);
         var _save = await _repository.SetVaccine(newVaccine);
 
-        return new VaccineResponseDto(newVaccine.Id, newVaccine.Name,newVaccine.UniqueID);
+        return new VaccineResponseDto(newVaccine.Id, newVaccine.Name,newVaccine.UniqueID,newVaccine.Doses);
     }
 
     public async Task<Boolean> DeleteVaccine(Guid id)
