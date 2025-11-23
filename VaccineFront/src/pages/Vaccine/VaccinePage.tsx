@@ -1,24 +1,55 @@
-import { useState } from "react";
-import { CheckIcon, ClipboardDocumentCheckIcon } from  "@heroicons/react/24/outline";
-
+import { useEffect, useState } from "react";
+import { CheckIcon, ClipboardDocumentCheckIcon,TrashIcon } from  "@heroicons/react/24/outline";
+import { VaccineService} from "../../Services/VaccineService";
+import type { Vaccine, VaccineCreate } from "../../Interfaces/VaccineI";
 
 export default function VaccinePage(){
-  const [name, setName] = useState('');
-  const [id, setId] = useState('');
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const vaccines: any[] = []
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 3000);
-    if (name && id) {
-      setName('');
-      setId('');
-
-    }
-  };
-
+  const [Vaccines, setVaccine] = useState<Vaccine[]>([]);
+    const [VaccineName, setVaccineName] = useState("");
+    const [VaccineUniqueId, setVaccineUniqueId] = useState("");
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [loading, setLoading] = useState(true)
+      
+  
+    useEffect(() => {
+        VaccineService.list().then((data) => {
+        setVaccine(data)
+        })
+        .finally(() => setLoading(false));
+      }, [])
+    if (loading) return <p>Carregando...</p>
+    
+    const handleDelete = async (Id:string) =>
+     {
+        console.log(Id)
+        await VaccineService.delete(Id);
+        setVaccine(prev => prev.filter(p => p.id !== Id));
+     }
+     const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+  
+        const newVaccine: VaccineCreate = {
+          name: VaccineName,
+          uniqueID: VaccineUniqueId,
+        };
+  
+        try {
+          const data = await VaccineService.create(newVaccine);
+  
+          setShowSuccess(true);
+          setTimeout(() => setShowSuccess(false), 3000);
+  
+        
+          setVaccine((prev) => [...prev, data]);
+  
+          setVaccineName("");
+          setVaccineUniqueId("");
+          
+        } catch (err) {
+          console.error("Error:", err);
+        }
+      };
+      
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="mb-12">
@@ -29,7 +60,7 @@ export default function VaccinePage(){
       </div>
 
       {/* Decorative stripe */}
-      <div className="h-1 w-24 bg-gradient-to-r from-[#307AE0] to-[#549CFF] mb-12"></div>
+      <div className="h-1 w-24 bg-linear-to-r from-[#307AE0] to-[#549CFF] mb-12"></div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Form Section */}
@@ -50,8 +81,8 @@ export default function VaccinePage(){
                 <input
                   id="vaccineName"
                   type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={VaccineName}
+                  onChange={(e) => setVaccineName(e.target.value)}
                   className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors"
                   placeholder="Enter vaccine name"
                   required
@@ -68,8 +99,8 @@ export default function VaccinePage(){
                 <input
                   id="vaccineId"
                   type="text"
-                  value={id}
-                  onChange={(e) => setId(e.target.value)}
+                  value={VaccineUniqueId}
+                  onChange={(e) => setVaccineUniqueId(e.target.value)}
                   className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors"
                   placeholder="Enter unique identifier"
                   required
@@ -103,27 +134,31 @@ export default function VaccinePage(){
           <div className="bg-[#F8F9FA] border-2 border-[#DEE2E6] p-6">
             <h4 className="mb-6">Registered Vaccines</h4>
             
-            {vaccines.length === 0 ? (
+            {Vaccines.length === 0 ? (
               <p className="text-[#6C757D]">No vaccines registered yet</p>
             ) : (
               <div className="space-y-3">
-                {vaccines.slice(-5).reverse().map((vaccine) => (
-                  <div key={vaccine.id} className="bg-white p-4 border border-[#DEE2E6]">
-                    <p className="mb-1">{vaccine.name}</p>
-                    <p className="text-[#6C757D]">ID: {vaccine.id}</p>
-                  </div>
-                ))}
-                {vaccines.length > 5 && (
-                  <p className="text-[#6C757D] text-center pt-2">
-                    +{vaccines.length - 5} more
-                  </p>
-                )}
-              </div>
-            )}
+                {Vaccines.slice().reverse().map((vaccine) => (
+                  <div
+                      key={vaccine.id}
+                      className="bg-white p-4 border border-[#DEE2E6] flex items-center justify-between"
+                    >
+                      <div>
+                        <p className="mb-1">{vaccine.name}</p>
+                        <p className="text-[#6C757D]">ID: {vaccine.id}</p>
+                      </div>
+                      <button
+                        className="p-2 rounded bg-red-500 hover:bg-red-300 transition-colors"
+                        onClick={() => handleDelete(vaccine.id)}
+                      >
+                          <TrashIcon className="w-6 h-6 text-white" strokeWidth={2.5} />
+                      </button>
+                    </div>
+            ))}
           </div>
+          )}
+        </div>
         </div>
       </div>
     </div>
-  );
-}
-
+  );}

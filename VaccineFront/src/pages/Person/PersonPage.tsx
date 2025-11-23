@@ -40,10 +40,8 @@ export default function PersonPage()
         setShowSuccess(true);
         setTimeout(() => setShowSuccess(false), 3000);
 
-        // adiciona o novo person corretamente
         setPerson((prev) => [...prev, data]);
 
-        // limpa inputs
         setPersonName("");
         setPersonUniqueId("");
 
@@ -82,6 +80,7 @@ export default function PersonPage()
                 <input
                   id="personName"
                   type="text"
+                  value={personName}
                   onChange={(e) => (setPersonName((e.target.value)))}
                   className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors"
                   placeholder="Enter full name"
@@ -99,6 +98,7 @@ export default function PersonPage()
                 <input
                   id="personId"
                   type="text"
+                  value={personUniqueId}
                   onChange={(e) => (setPersonUniqueId((e.target.value)))}
                   className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors"
                   placeholder="Enter unique identifier"
@@ -147,10 +147,9 @@ export default function PersonPage()
                         <p className="mb-1">{person.name}</p>
                         <p className="text-[#6C757D]">ID: {person.id}</p>
                       </div>
-
                       <button
                         className="p-2 rounded bg-red-500 hover:bg-red-300 transition-colors"
-                        onClick={() => handleDelete(person.uniqueID)}
+                        onClick={() => handleDelete(person.id)}
                       >
                           <TrashIcon className="w-6 h-6 text-white" strokeWidth={2.5} />
                       </button>

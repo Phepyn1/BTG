@@ -1,5 +1,3 @@
-
-
 import type { Person, PersonCreate } from "../Interfaces/PersonsI";
 import ApiClient from "../util/ApiClient"
 
