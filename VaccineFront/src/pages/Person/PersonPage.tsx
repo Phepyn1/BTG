@@ -14,7 +14,6 @@ export default function PersonPage()
     
 
     useEffect(() => {
-      console.log("PersonChegouAQui2")
       PersonService.list().then((data) => {
       setPerson(data)
       })
@@ -151,7 +150,7 @@ export default function PersonPage()
 
                       <button
                         className="p-2 rounded bg-red-500 hover:bg-red-300 transition-colors"
-                        onClick={() => handleDelete(person.id)}
+                        onClick={() => handleDelete(person.uniqueID)}
                       >
                           <TrashIcon className="w-6 h-6 text-white" strokeWidth={2.5} />
                       </button>
