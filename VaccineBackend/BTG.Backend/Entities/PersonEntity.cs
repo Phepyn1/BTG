@@ -13,5 +13,7 @@ public class ModelPerson
     public Guid Id { get; init; }
     public string Name { get; private set; }
     public string UniqueID { get; private set; }
+    public ICollection<ModelVaccination> Vaccinations { get; set; } = new List<ModelVaccination>();
+
 
 }

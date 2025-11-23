@@ -3,6 +3,7 @@ using System;
 using BTG.Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BTG.Backend.Migrations
 {
     [DbContext(typeof(BTGContext))]
-    partial class PersonContextModelSnapshot : ModelSnapshot
+    [Migration("20251123201126_DoseTable")]
+    partial class DoseTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.0");
@@ -71,12 +74,6 @@ namespace BTG.Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DoseId");
-
-                    b.HasIndex("PersonId");
-
-                    b.HasIndex("VaccineId");
-
                     b.ToTable("Vaccination");
                 });
 
@@ -100,43 +97,6 @@ namespace BTG.Backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Vaccine");
-                });
-
-            modelBuilder.Entity("BTG.Backend.entites.ModelVaccination", b =>
-                {
-                    b.HasOne("BTG.Backend.entites.ModelDose", "Dose")
-                        .WithMany()
-                        .HasForeignKey("DoseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BTG.Backend.entites.ModelPerson", "Person")
-                        .WithMany("Vaccinations")
-                        .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BTG.Backend.entites.ModelVaccine", "Vaccine")
-                        .WithMany("Vaccinations")
-                        .HasForeignKey("VaccineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Dose");
-
-                    b.Navigation("Person");
-
-                    b.Navigation("Vaccine");
-                });
-
-            modelBuilder.Entity("BTG.Backend.entites.ModelPerson", b =>
-                {
-                    b.Navigation("Vaccinations");
-                });
-
-            modelBuilder.Entity("BTG.Backend.entites.ModelVaccine", b =>
-                {
-                    b.Navigation("Vaccinations");
                 });
 #pragma warning restore 612, 618
         }

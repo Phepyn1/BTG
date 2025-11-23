@@ -15,5 +15,9 @@ public class ModelVaccination
        public Guid VaccineId { get; private set;}
        public Guid DoseId { get; private set;}
        public DateOnly Date {  get; private set;}
-    }
+
+    public ModelPerson Person { get; set; }   
+    public ModelVaccine Vaccine { get; set; } 
+    public ModelDose Dose { get; set; }       
+}
 

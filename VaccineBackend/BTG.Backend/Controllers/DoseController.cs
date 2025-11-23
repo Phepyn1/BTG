@@ -11,7 +11,7 @@ public static class DoseController
 
         route.MapGet("", async (DoseService service) =>
         {
-            List<DoseResponseDto> DosesList = await service.GetDoses();
+            List<DoseDto> DosesList = await service.GetDoses();
             if (!DosesList.Any()) { return Results.BadRequest("Lista vazia!"); }
             return Results.Ok(DosesList);
         });
@@ -21,7 +21,7 @@ public static class DoseController
             var createDose = await service.CreateDose(DoseDto);
             if (createDose == null)
                 return Results.Conflict(new { message = "UniqueKey já cadastrada" });
-            return Results.Created($"/Dose/{createDose.Id}", createDose);
+            return Results.Created($"/Dose/{createDose.id}", createDose);
         });
 
         route.MapDelete("{id:guid}", async (Guid id, DoseService service) =>
