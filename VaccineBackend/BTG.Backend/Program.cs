@@ -1,11 +1,15 @@
-using VaccineBack.Controller.Person;
-using VaccineBack.Services.PersonService;
+using BTG.Backend.Controller;
+using BTG.Backend.Data;
+using BTG.Backend.Repositories;
+using BTG.Backend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<PersonService>();
+builder.Services.AddScoped<PersonContext>();
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>

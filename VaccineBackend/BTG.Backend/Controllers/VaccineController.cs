@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 
-namespace BTG_BACKEND.Controller
+namespace BTG.Backend.Controller
 {
     [Route("api/[controller]")]
     [ApiController]

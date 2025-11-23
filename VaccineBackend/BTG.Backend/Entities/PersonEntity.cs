@@ -1,16 +1,19 @@
-namespace VaccineBack.entites.personEntity;
+using System.Xml;
+
+namespace BTG.Backend.entites;
 
 public class ModelPerson
 {
-    public ModelPerson(string name)
+    public ModelPerson(string name, string uniqueID)
     {
-        Name = name;
         Id = Guid.NewGuid();
+        Name = name;
+        UniqueID = uniqueID;
     }
 
 
-    public Guid Id { get; private set; }
+    public Guid Id { get; init; }
     public string Name { get; private set; }
-
+    public string UniqueID { get; private set; }
 
 }

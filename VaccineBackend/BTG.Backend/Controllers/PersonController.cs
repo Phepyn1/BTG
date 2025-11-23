@@ -1,19 +1,20 @@
-namespace VaccineBack.Controller.Person;
+namespace BTG.Backend.Controller;
 
 using System.Reflection.Metadata.Ecma335;
 using Microsoft.VisualBasic;
 using VaccineBack.Dto.person;
-using VaccineBack.Services.PersonService;
+using BTG.Backend.Services;
 public static class PersonRoute
 {
+
+  
     public static void PersonRoutes(this WebApplication app)
     {
         var route = app.MapGroup("api/person");
 
-        route.MapGet("",() =>
+        route.MapGet("",async (PersonService service) =>
         {
-            PersonService service =  new PersonService();
-            List<PersonResponseDto> personsList = service.GetPersons();
+            List<PersonResponseDto> personsList = await service.GetPersons();
             if(!personsList.Any()){return Results.BadRequest("Lista vazia!");}
             return Results.Ok(personsList);   
         });
@@ -26,7 +27,10 @@ public static class PersonRoute
         
         route.MapDelete("{id:guid}", async (Guid id, PersonService service) =>
         {
-            return await service.DeletePerson(id);
+            var deleted = await service.DeletePerson(id);
+            return deleted
+        ? Results.NoContent()
+            : Results.NotFound("Person not found");
         });
 
 
