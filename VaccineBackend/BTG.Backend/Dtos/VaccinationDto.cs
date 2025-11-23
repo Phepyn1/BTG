@@ -1,4 +1,4 @@
-namespace VaccineBack.Dto.Vaccination;
+namespace BTG.Backend.Dtos;
 
 
 public record class CreateVaccinationDTO

@@ -1,8 +1,8 @@
+using BTG.Backend.Dtos;
+using BTG.Backend.Services;
+
 namespace BTG.Backend.Controllers;
 
-
-using VaccineBack.Dto.person;
-using BTG.Backend.Services;
 public static class PersonRoute
 {
 

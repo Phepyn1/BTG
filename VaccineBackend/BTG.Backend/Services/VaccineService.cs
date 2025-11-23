@@ -2,7 +2,7 @@ namespace BTG.Backend.Services;
 
 using BTG.Backend.entites;
 using BTG.Backend.Repositories;
-using VaccineBack.Dto.Vaccine;
+using BTG.Backend.Dtos;
 
 public class VaccineService
 {
@@ -16,16 +16,16 @@ public class VaccineService
     public async Task<List<VaccineResponseDto>> GetVaccines()
     {
         var Vaccines = await _repository.GetAll();
-
-
         return Vaccines
         .Select(p => new VaccineResponseDto(p.Id, p.Name, p.UniqueID,p.Doses))
         .ToList(); 
     }
 
-    public async Task<VaccineResponseDto> CreateVaccine(CreateVaccineDto dto)
+    public async Task<VaccineResponseDto?> CreateVaccine(CreateVaccineDto dto)
     {
         ModelVaccine newVaccine = new ModelVaccine(dto.Name,dto.UniqueID,dto.Doses);
+        if (await _repository.FindByUniqueId(dto.UniqueID) != null)
+            return null;
         var _save = await _repository.SetVaccine(newVaccine);
 
         return new VaccineResponseDto(newVaccine.Id, newVaccine.Name,newVaccine.UniqueID,newVaccine.Doses);

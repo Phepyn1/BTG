@@ -1,5 +1,5 @@
 ﻿using BTG.Backend.Services;
-using VaccineBack.Dto.Vaccination;
+using BTG.Backend.Dtos;
 
 namespace BTG.Backend.Controllers;
 

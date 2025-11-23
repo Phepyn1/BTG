@@ -13,6 +13,7 @@ builder.Services.AddScoped<VaccinationService>();
 builder.Services.AddScoped<BTGContext>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IVaccineRepository, VaccineRepository>();
+builder.Services.AddScoped<IVaccinationRepository, VaccinationRepository>();
 
 builder.Services.AddCors(options =>
 {

@@ -14,7 +14,15 @@ namespace BTG.Backend.Repositories;
         _context = context;
     }
     public async Task<List<ModelVaccine>> GetAll() => await _context.Vaccine.ToListAsync();
-
+    
+    public async Task<ModelVaccine?> FindByUniqueId(string UniqueId)
+    {
+        var vaccine = await _context.Vaccine.FirstOrDefaultAsync(p => p.UniqueID == UniqueId);
+        if (vaccine is null)
+            return null;
+        return vaccine;
+    }
+    
     public async Task<ModelVaccine?> FindById(Guid id)
     {
         var vaccine = await _context.Vaccine.FirstOrDefaultAsync(p => p.Id == id);

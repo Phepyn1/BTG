@@ -1,7 +1,7 @@
 ﻿namespace BTG.Backend.Controllers;
 
 
-using VaccineBack.Dto.Vaccine;
+using BTG.Backend.Dtos;
 using BTG.Backend.Services;
 public static class VaccineRoute
 {
@@ -21,6 +21,7 @@ public static class VaccineRoute
         route.MapPost("",  async (CreateVaccineDto VaccineDto, VaccineService service) =>
         {
            var createVaccine = await service.CreateVaccine(VaccineDto);
+            if (createVaccine == null) return Results.Conflict(new { message = "UniqueKey já cadastrada" });
             return  Results.Created($"/vaccine/{createVaccine.Id}", createVaccine) ;   
         });
         

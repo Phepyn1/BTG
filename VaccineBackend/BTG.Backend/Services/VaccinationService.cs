@@ -1,6 +1,6 @@
 ﻿using BTG.Backend.entites;
 using BTG.Backend.Repositories;
-using VaccineBack.Dto.Vaccination;
+using BTG.Backend.Dtos;
 
 namespace BTG.Backend.Services;
 
@@ -9,11 +9,13 @@ namespace BTG.Backend.Services;
 
     private readonly IPersonRepository _personRepository;
     private readonly IVaccineRepository _vaccineRepository;
+    private readonly IVaccinationRepository _repository;
     //private readonly IVaccinationRepository _vaccinationRepository;
-    public VaccinationService(IPersonRepository personRepository, IVaccineRepository vaccineRepository)
+    public VaccinationService(IPersonRepository personRepository, IVaccineRepository vaccineRepository, IVaccinationRepository repository)
     {
         _personRepository = personRepository;
         _vaccineRepository = vaccineRepository;
+        _repository = repository;
     }
 
     public async Task<VaccinationResponseDTO?> Create(CreateVaccinationDTO dto)
@@ -24,11 +26,11 @@ namespace BTG.Backend.Services;
             return null;
 
         var vaccine = await _vaccineRepository.FindById(recordVaccine.VaccineId);
-        
         if (vaccine == null)
             return null;
+       var _save = await _repository.SetVaccination(recordVaccine);
 
-        return new VaccinationResponseDTO(recordVaccine.Id, "recordVaccine", DateOnly.FromDateTime(DateTime.Now),vaccine.Name);
+        return new VaccinationResponseDTO(recordVaccine.Id, "recordVaccine", recordVaccine.Date,vaccine.Name);
 
 
     } 

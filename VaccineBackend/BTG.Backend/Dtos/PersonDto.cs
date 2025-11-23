@@ -1,4 +1,4 @@
-namespace VaccineBack.Dto.person;
+namespace BTG.Backend.Dtos;
 
   public record class CreatePersonDto(
      string Name,

@@ -2,7 +2,7 @@ namespace BTG.Backend.Services;
 
 using BTG.Backend.entites;
 using BTG.Backend.Repositories;
-using VaccineBack.Dto.person;
+using BTG.Backend.Dtos;
 
 public class PersonService
 {
