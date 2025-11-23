@@ -1,30 +1,59 @@
-import {UserIcon , CheckIcon} from "@heroicons/react/24/outline";
+import {UserIcon , CheckIcon,TrashIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import type { Person } from "../../Interfaces/PersonsI";
+import type { Person, PersonCreate } from "../../Interfaces/PersonsI";
 import { PersonService } from "../../Services/PersonService";
 
 export default function PersonPage()
 {
 
   const [persons, setPerson] = useState<Person[]>([]);
+  const [personName, setPersonName] = useState("");
+  const [personUniqueId, setPersonUniqueId] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
   const [loading, setLoading] = useState(true)
     
 
     useEffect(() => {
+      console.log("PersonChegouAQui2")
       PersonService.list().then((data) => {
       setPerson(data)
       })
       .finally(() => setLoading(false));
     }, [])
-   if (loading) return <p>Carregando...</p>
+  if (loading) return <p>Carregando...</p>
   
-    
-   const handleSubmit = (e: React.FormEvent) => {
+   const handleDelete = async (Id:string) =>
+   {
+      await PersonService.delete(Id);
+      setPerson(prev => prev.filter(p => p.id !== Id));
+   }
+   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 3000);
-  };
+
+      const newPerson: PersonCreate = {
+        name: personName,
+        uniqueID: personUniqueId,
+      };
+
+      try {
+        const data = await PersonService.create(newPerson);
+
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 3000);
+
+        // adiciona o novo person corretamente
+        setPerson((prev) => [...prev, data]);
+
+        // limpa inputs
+        setPersonName("");
+        setPersonUniqueId("");
+
+      } catch (err) {
+        console.error("Error:", err);
+      }
+    };
+
+
     return (
       <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="mb-12">
@@ -54,7 +83,7 @@ export default function PersonPage()
                 <input
                   id="personName"
                   type="text"
-                  onChange={(e) => (e.target.value)}
+                  onChange={(e) => (setPersonName((e.target.value)))}
                   className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors"
                   placeholder="Enter full name"
                   required
@@ -71,6 +100,7 @@ export default function PersonPage()
                 <input
                   id="personId"
                   type="text"
+                  onChange={(e) => (setPersonUniqueId((e.target.value)))}
                   className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors"
                   placeholder="Enter unique identifier"
                   required
@@ -102,24 +132,33 @@ export default function PersonPage()
         <div className="bg-[#f8f9fad0] border-2 border-[#DEE2E6] p-6">
           <h4 className="mb-6">Registered Persons</h4>
 
-          {persons.length === 0 ? (
-            <p className="text-[#6C757D]">No persons registered yet</p>
-          ) : (
-            <div className="space-y-3 h-90 overflow-y-auto pr-2"> 
-              {persons
-                .slice()       // copia
-                .reverse()     // mais recentes primeiro
-                .map((person) => (
-                  <div
-                    key={person.id}
-                    className="bg-white p-4 border border-[#DEE2E6]"
-                  >
-                    <p className="mb-1">{person.name}</p>
-                    <p className="text-[#6C757D]">ID: {person.id}</p>
-                  </div>
-                ))}
-            </div>
-          )}
+            {persons.length === 0 ? (
+              <p className="text-[#6C757D]">No persons registered yet</p>
+            ) : (
+              <div className="space-y-3 h-90 overflow-y-auto pr-2">
+                {persons
+                  .slice()
+                  .reverse()
+                  .map((person) => (
+                    <div
+                      key={person.id}
+                      className="bg-white p-4 border border-[#DEE2E6] flex items-center justify-between"
+                    >
+                      <div>
+                        <p className="mb-1">{person.name}</p>
+                        <p className="text-[#6C757D]">ID: {person.id}</p>
+                      </div>
+
+                      <button
+                        className="p-2 rounded bg-red-500 hover:bg-red-300 transition-colors"
+                        onClick={() => handleDelete(person.id)}
+                      >
+                          <TrashIcon className="w-6 h-6 text-white" strokeWidth={2.5} />
+                      </button>
+                    </div>
+                  ))}
+              </div>
+            )}
         </div>
       </div>
       </div>

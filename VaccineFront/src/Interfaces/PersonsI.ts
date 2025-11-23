@@ -7,3 +7,9 @@ export interface Person
     uniqueID: string,
     Vaccines: Vaccine[]
 }
+
+
+export interface PersonCreate{
+    name: string,
+    uniqueID: string,
+}
