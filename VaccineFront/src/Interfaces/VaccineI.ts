@@ -7,4 +7,5 @@ export interface Vaccine{
 export interface VaccineCreate{
     name: string,
     uniqueID: string,
+    doses: number
 }

@@ -5,6 +5,7 @@ export function Header() {
     { id: '/', label: 'Home' },
     { id: 'persons', label: 'Register Person' },
     { id: 'vaccine', label: 'Register Vaccine'},
+    { id: 'vaccination', label: 'Register Vaccination'},
   ];
   const location = useLocation();
 
@@ -12,7 +13,7 @@ export function Header() {
     return location.pathname === path || location.pathname.startsWith('/' + path);
   };
   return (
-    <header className="bg-[#001E62] border-b-4 border-[#1a2b42]">
+    <header className="bg-[#001E62] border-b-4 border-[#307AE0]">
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
