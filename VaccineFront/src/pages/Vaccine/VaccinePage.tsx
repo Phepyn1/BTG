@@ -35,9 +35,9 @@ export default function VaccinePage() {
     try {
       await VaccineService.delete(deleteId);
       setVaccine(prev => prev.filter(v => v.id !== deleteId));
-      toast.success("Vacina excluída com sucesso!");
+      toast.success("Vaccine successfully ruled out!");
     } catch (error) {
-      toast.error("Erro ao excluir vacina");
+      toast.error("Error deleting vaccine");
     } finally {
       setShowModal(false);
       setDeleteId(null);
@@ -64,7 +64,7 @@ export default function VaccinePage() {
       setVaccineUniqueId("");
       setVaccineDose("");
 
-      toast.success("Vaccine successfully registered!");
+      toast.success("Vaccine successfully ruled out!");
 
     } catch (err: any) {
       toast.error("Error: Unique ID already registered");

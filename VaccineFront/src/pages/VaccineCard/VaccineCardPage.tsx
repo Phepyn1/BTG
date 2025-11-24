@@ -176,7 +176,7 @@ export default function VaccinationCard() {
                   <h3 className="text-white text-2xl font-bold">Vaccination Card</h3>
                 </div>
                 <p className="text-blue-100 text-lg">
-                  {selectedPerson.name} • ID: {selectedPerson.uniqueID}
+                  {selectedPerson.name}
                 </p>
               </div>
 
