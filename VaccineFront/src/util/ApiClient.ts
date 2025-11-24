@@ -1,41 +1,49 @@
-import axios from 'axios'
+import axios, { type Method } from 'axios'
 
 const baseURL = import.meta.env.VITE_API_URI;
+
 export const api = axios.create({
-  baseURL: baseURL,
+  baseURL,
 })
 
 class ApiClient {
   public async DoRequest(
-    method: 'GET' | "POST" | 'PUT' | 'DELETE' = 'GET',
+    method: Method = 'GET',
     endpoint: string,
     data: any = {},
   ) {
-    const url = endpoint.includes('http')
-      ? endpoint
-      : `${baseURL}${endpoint}`
-    const headers: any = {}
-    headers.Accept = 'application/json'
+    const url = endpoint.includes('http') ? endpoint : `${baseURL}${endpoint}`;
+    
+    const headers: Record<string, string> = {
+      Accept: 'application/json',
+    };
 
-
-        const requestConfig: any = {
-      method,
-      headers,
-      url,
-      data,
-      params: undefined
+    const token = localStorage.getItem('token');
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
     }
 
-    const response = await axios(requestConfig)
+
+    const requestConfig: any = {
+      method,
+      url,
+      headers,
+    };
+
+    if (method.toUpperCase() === 'GET') {
+      requestConfig.params = data;
+    } else {
+      requestConfig.data = data;
+    }
+
+    const response = await axios(requestConfig);
 
     if (response.data && response.data.status === 'error') {
-      throw new Error('Legacy API status error')
+      throw new Error('Legacy API status error');
     }
 
-    return response.data
+    return response.data;
   }
-
-
 }
 
-export default ApiClient
+export default ApiClient;
