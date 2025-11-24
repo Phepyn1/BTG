@@ -65,7 +65,8 @@ export default function VaccinationRecordPage() {
       toast.success("Vaccination record created successfully!");
 
     } catch (err: any) {
-      toast.error("Error creating vaccination record");
+      console.log(err)
+      toast.error(err.response.data.message);
     }
   };
 
