@@ -3,7 +3,7 @@
 A RESTful system for managing vaccination records.  
 It allows registering people, vaccines, and vaccination entries, as well as viewing and deleting vaccination cards.
 
-This project was developed for a [technical interview]("docs/Cartão%de%Vacinação.md") at **BTG Empresas** using **.NET 8**, **SQLite**, **EF Core**, **TypeScript**, **Vite**, and **TailwindCSS**.
+This project was developed for a [technical interview]("docs\Cartão%de%Vacinação.md") at **BTG Empresas** using **.NET 8**, **SQLite**, **EF Core**, **TypeScript**, **Vite**, and **TailwindCSS**.
 
 The UI design was created using **Figma AI + Figma**, following the **BTG visual language** for layout, spacing, typography, and color structure.
 
