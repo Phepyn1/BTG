@@ -3,24 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\services\\vaccinationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:services\\vaccinationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\controllers\\vaccinationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:controllers\\vaccinationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\vaccinationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\vaccinationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\controllers\\vaccinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:controllers\\vaccinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\controllers\\dosecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:controllers\\dosecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\services\\vaccineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:services\\vaccineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\cardvaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\cardvaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\vaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\vaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\vaccinationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\vaccinationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\dosedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\dosedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\entities\\vaccinationentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:entities\\vaccinationentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\services\\doseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:services\\doseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\services\\vaccinationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:services\\vaccinationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\repositories\\ivaccinationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,36 +75,12 @@
       "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:repositories\\vaccinationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\controllers\\vaccinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:controllers\\vaccinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\controllers\\dosecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:controllers\\dosecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\entities\\vaccineentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:entities\\vaccineentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\services\\doseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:services\\doseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\cardvaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\cardvaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\data\\btgcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,18 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\repositories\\doserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:repositories\\doserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\dosedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\dosedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\vaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\vaccinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|c:\\users\\renan\\desktop\\btg_vaccine\\vaccinebackend\\btg.backend\\dtos\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F523CB-6166-F6C0-A8EB-4AC6948CDEBF}|BTG.Backend.csproj|solutionrelative:dtos\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,11 +106,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 172,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-24T12:01:09.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "VaccinationRepository.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Repositories\\VaccinationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\VaccinationRepository.cs",
@@ -119,26 +136,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "VaccineController.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Controllers\\VaccineController.cs",
               "RelativeDocumentMoniker": "Controllers\\VaccineController.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Controllers\\VaccineController.cs",
               "RelativeToolTip": "Controllers\\VaccineController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:43:47.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "VaccinationService.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Services\\VaccinationService.cs",
               "RelativeDocumentMoniker": "Services\\VaccinationService.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Services\\VaccinationService.cs",
               "RelativeToolTip": "Services\\VaccinationService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAYwB0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAqwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:43:17.48Z",
               "EditorCaption": ""
@@ -151,27 +168,27 @@
               "RelativeDocumentMoniker": "Controllers\\VaccinationController.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Controllers\\VaccinationController.cs",
               "RelativeToolTip": "Controllers\\VaccinationController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwA0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:43:55.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "VaccinationDto.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\VaccinationDto.cs",
               "RelativeDocumentMoniker": "Dtos\\VaccinationDto.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\VaccinationDto.cs",
               "RelativeToolTip": "Dtos\\VaccinationDto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAkwAsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:42:41.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "IVaccinationRepository.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Repositories\\IVaccinationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IVaccinationRepository.cs",
@@ -184,78 +201,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "PersonController.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Controllers\\PersonController.cs",
               "RelativeDocumentMoniker": "Controllers\\PersonController.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Controllers\\PersonController.cs",
               "RelativeToolTip": "Controllers\\PersonController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAjwCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:44:00.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "VaccineService.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Services\\VaccineService.cs",
               "RelativeDocumentMoniker": "Services\\VaccineService.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Services\\VaccineService.cs",
               "RelativeToolTip": "Services\\VaccineService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:43:07.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "DoseController.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Controllers\\DoseController.cs",
               "RelativeDocumentMoniker": "Controllers\\DoseController.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Controllers\\DoseController.cs",
               "RelativeToolTip": "Controllers\\DoseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:47:20.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "VaccinationEntity.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Entities\\VaccinationEntity.cs",
               "RelativeDocumentMoniker": "Entities\\VaccinationEntity.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Entities\\VaccinationEntity.cs",
               "RelativeToolTip": "Entities\\VaccinationEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T20:17:27.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "VaccineEntity.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Entities\\VaccineEntity.cs",
               "RelativeDocumentMoniker": "Entities\\VaccineEntity.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Entities\\VaccineEntity.cs",
               "RelativeToolTip": "Entities\\VaccineEntity.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA5wBMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T20:17:34.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T21:13:49.939Z",
               "EditorCaption": ""
@@ -275,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "PersonRepository.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Repositories\\PersonRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\PersonRepository.cs",
@@ -288,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "IPersonRepository.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Repositories\\IPersonRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IPersonRepository.cs",
@@ -301,20 +318,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 5,
               "Title": "CardVaccineDto.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\CardVaccineDto.cs",
               "RelativeDocumentMoniker": "Dtos\\CardVaccineDto.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\CardVaccineDto.cs",
               "RelativeToolTip": "Dtos\\CardVaccineDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T19:35:20.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "BTGContext.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Data\\BTGContext.cs",
               "RelativeDocumentMoniker": "Data\\BTGContext.cs",
@@ -327,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "DoseEntity.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Entities\\DoseEntity.cs",
               "RelativeDocumentMoniker": "Entities\\DoseEntity.cs",
@@ -335,23 +352,25 @@
               "RelativeToolTip": "Entities\\DoseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:50:45.865Z"
+              "WhenOpened": "2025-11-23T19:50:45.865Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "PersonEntity.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Entities\\PersonEntity.cs",
               "RelativeDocumentMoniker": "Entities\\PersonEntity.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Entities\\PersonEntity.cs",
               "RelativeToolTip": "Entities\\PersonEntity.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA1wBAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T20:17:22.609Z"
+              "WhenOpened": "2025-11-23T20:17:22.609Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "DoseRepository.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Repositories\\DoseRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\DoseRepository.cs",
@@ -359,43 +378,47 @@
               "RelativeToolTip": "Repositories\\DoseRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:52:26.078Z"
+              "WhenOpened": "2025-11-23T19:52:26.078Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 10,
               "Title": "DoseDto.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\DoseDto.cs",
               "RelativeDocumentMoniker": "Dtos\\DoseDto.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\DoseDto.cs",
               "RelativeToolTip": "Dtos\\DoseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:42:30.845Z"
+              "WhenOpened": "2025-11-23T19:42:30.845Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 7,
               "Title": "VaccineDto.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\VaccineDto.cs",
               "RelativeDocumentMoniker": "Dtos\\VaccineDto.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\VaccineDto.cs",
               "RelativeToolTip": "Dtos\\VaccineDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:42:48.931Z"
+              "WhenOpened": "2025-11-23T19:42:48.931Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 9,
               "Title": "PersonDto.cs",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\PersonDto.cs",
               "RelativeDocumentMoniker": "Dtos\\PersonDto.cs",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\Dtos\\PersonDto.cs",
               "RelativeToolTip": "Dtos\\PersonDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:42:36.523Z"
+              "WhenOpened": "2025-11-23T19:42:36.523Z",
+              "EditorCaption": ""
             }
           ]
         }

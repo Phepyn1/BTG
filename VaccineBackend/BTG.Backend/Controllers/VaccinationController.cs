@@ -15,7 +15,7 @@ namespace BTG.Backend.Controllers;
                 if (result is null)
                     return Results.BadRequest("Person or vaccine not found");
                 return Results.Created($"/person/{result.Id}", result);
-            });
+            }).WithTags("Vaccination");
 
             route.MapDelete("{id:guid}", async (Guid id, VaccinationService service) =>
             {
@@ -23,7 +23,7 @@ namespace BTG.Backend.Controllers;
                 return deleted
                 ? Results.NoContent()
                 : Results.NotFound("Person not found");
-            });
+            }).WithTags("Vaccination");
     }
     }
 

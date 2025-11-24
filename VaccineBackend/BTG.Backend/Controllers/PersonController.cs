@@ -16,20 +16,21 @@ public static class PersonRoute
             List<PersonResponseDto> personsList = await service.GetPersons();
             if(!personsList.Any()){return Results.BadRequest("Lista vazia!");}
             return Results.Ok(personsList);   
-        });
+        }).WithTags("Persons");
+
         route.MapGet("{id:guid}", async (Guid id, PersonService service) =>
         {
             var getCard = await service.GetCards(id);
             return Results.Ok(getCard);
 
-        });
+        }).WithTags("Persons");
         route.MapPost("",  async (CreatePersonDto personDto, PersonService service) =>
         {
            var createPerson = await service.CreatePerson(personDto);
            if (createPerson == null)
                 return Results.Conflict(new { message = "UniqueKey já cadastrada" });
             return  Results.Created($"/person/{createPerson.Id}", createPerson) ;   
-        });
+        }).WithTags("Persons");
         
         route.MapDelete("{id:guid}", async (Guid id, PersonService service) =>
         {
@@ -37,7 +38,7 @@ public static class PersonRoute
             return deleted
         ? Results.NoContent()
             : Results.NotFound("Person not found");
-        });
+        }).WithTags("Persons");
 
 
 

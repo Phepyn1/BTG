@@ -16,22 +16,22 @@ public static class VaccineRoute
             List<VaccineResponseDto> VaccinesList = await service.GetVaccines();
             if(!VaccinesList.Any()){return Results.BadRequest("Lista vazia!");}
             return Results.Ok(VaccinesList);   
-        });
+        }).WithTags("Vaccines"); 
 
         route.MapPost("",  async (CreateVaccineDto VaccineDto, VaccineService service) =>
         {
            var createVaccine = await service.CreateVaccine(VaccineDto);
             if (createVaccine == null) return Results.Conflict(new { message = "UniqueKey já cadastrada" });
             return  Results.Created($"/vaccine/{createVaccine.Id}", createVaccine) ;   
-        });
-        
+        }).WithTags("Vaccines");
+
         route.MapDelete("{id:guid}", async (Guid id, VaccineService service) =>
         {
             var deleted = await service.DeleteVaccine(id);
             return deleted
         ? Results.NoContent()
             : Results.NotFound("Vaccine not found");
-        });
+        }).WithTags("Vaccines");
 
     }
     

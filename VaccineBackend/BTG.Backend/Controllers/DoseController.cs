@@ -14,7 +14,7 @@ public static class DoseController
             List<DoseDto> DosesList = await service.GetDoses();
             if (!DosesList.Any()) { return Results.BadRequest("Lista vazia!"); }
             return Results.Ok(DosesList);
-        });
+        }).WithTags("Doses");
 
         route.MapPost("", async (CreateDoseDto DoseDto, DoseService service) =>
         {
@@ -22,7 +22,7 @@ public static class DoseController
             if (createDose == null)
                 return Results.Conflict(new { message = "UniqueKey já cadastrada" });
             return Results.Created($"/Dose/{createDose.id}", createDose);
-        });
+        }).WithTags("Doses");
 
         route.MapDelete("{id:guid}", async (Guid id, DoseService service) =>
         {
@@ -30,7 +30,7 @@ public static class DoseController
             return deleted
         ? Results.NoContent()
             : Results.NotFound("Dose not found");
-        });
+        }).WithTags("Doses");
     }
 }
 
