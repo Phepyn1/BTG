@@ -1,5 +1,6 @@
 ﻿using BTG.Backend.Services;
 using BTG.Backend.Dtos;
+using BTG.Backend.Exceptions;
 
 namespace BTG.Backend.Controllers;
 
@@ -11,10 +12,23 @@ namespace BTG.Backend.Controllers;
 
             route.MapPost("", async (CreateVaccinationDTO dto, VaccinationService service) =>
             {
-               var result = await service.Create(dto);
-                if (result is null)
-                    return Results.BadRequest("Person or vaccine not found");
-                return Results.Created($"/person/{result.Id}", result);
+                try
+                {
+                    var result = await service.Create(dto);
+                    return Results.Ok(result);
+                }
+                catch (NotFoundException ex)
+                {
+                    return Results.NotFound(new { message = ex.Message });
+                }
+                catch (AlreadyExistsException ex)
+                {
+                    return Results.Conflict(new { message = ex.Message });
+                }
+                catch (Exception)
+                {
+                    return Results.Problem("An unexpected error occurred.");
+                }
             }).WithTags("Vaccination");
 
             route.MapDelete("{id:guid}", async (Guid id, VaccinationService service) =>

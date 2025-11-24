@@ -1,6 +1,7 @@
 ﻿using BTG.Backend.Dtos;
 using BTG.Backend.Dtos.CardVaccine;
 using BTG.Backend.entites;
+using BTG.Backend.Exceptions;
 using BTG.Backend.Repositories;
 
 namespace BTG.Backend.Services;
@@ -23,27 +24,25 @@ namespace BTG.Backend.Services;
 
     public async Task<VaccinationResponseDTO?> Create(CreateVaccinationDTO dto)
     {
-        var record = new ModelVaccination(dto.PersonId, dto.VaccineId, dto.DoseId,dto.Date);
+        var person = await _personRepository.FindById(dto.PersonId);
+        if (person == null)
+            throw new NotFoundException($"Person with ID {dto.PersonId} not found.");
 
-        // valida person
-        if (await _personRepository.FindById(dto.PersonId) == null)
-            return null;
-
-        // valida vaccine
+ 
         var vaccine = await _vaccineRepository.FindById(dto.VaccineId);
         if (vaccine == null)
-            return null;
+            throw new NotFoundException($"Vaccine with ID {dto.VaccineId} not found.");
 
-        // valida dose
+  
         var dose = await _doseRepository.FindById(dto.DoseId);
         if (dose == null)
-            return null;
+            throw new NotFoundException($"Dose with ID {dto.DoseId} not found.");
 
-        // valida vacinação duplicada
+     
         if (await _repository.ExistsAsync(dto.PersonId, dto.VaccineId, dto.DoseId))
-            return null;
+            throw new AlreadyExistsException("This vaccination has already been recorded for this person.");
 
-        // salva
+        var record = new ModelVaccination(dto.PersonId, dto.VaccineId, dto.DoseId, dto.Date);
         await _repository.SetVaccination(record);
 
         return new VaccinationResponseDTO(

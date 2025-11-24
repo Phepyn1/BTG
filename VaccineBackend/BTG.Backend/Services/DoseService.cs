@@ -25,11 +25,21 @@ public class DoseService
 
     public async Task<DoseDto?> CreateDose(CreateDoseDto dto)
     {
-        ModelDose newDose = new ModelDose(dto.name);
-      
-        var _save = await _repository.SetDose(newDose);
+        if (dto == null || string.IsNullOrWhiteSpace(dto.name))
+            throw new ArgumentException("The dose name cannot be null or empty.");
 
-        return new DoseDto(newDose.Id, newDose.Name);
+        var newDose = new ModelDose(dto.name);
+
+        try
+        {
+            var savedDose = await _repository.SetDose(newDose);
+            return new DoseDto(savedDose.Id, savedDose.Name);
+        }
+        catch
+        {
+
+            return null;
+        }
     }
 
     public async Task<Boolean> DeleteDose(Guid id)
