@@ -8,15 +8,18 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { PersonService } from "../../Services/PersonService";
 import { VaccineService } from "../../Services/VaccineService";
+import { DoseService } from "../../Services/DoseService";
+import type { Dose } from "../../Interfaces/DoseI";
 
   
 
 export default function VaccinationRecordPage() {
   const [persons, setPersons] = useState<Person[]>([]);
   const [vaccines, setVaccines] = useState<Vaccine[]>([])
+  const [doses, setDoses] = useState<Dose[]>([]) 
   const [personId, setPersonId] = useState('');
   const [vaccineId, setVaccineId] = useState('');
-  const [dose, setDose] = useState('1');
+  const [doseId, setDoseId] = useState('');
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
   const [showSuccess, setShowSuccess] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -29,6 +32,10 @@ export default function VaccinationRecordPage() {
     VaccineService.list().then((data) => {
       setVaccines(data);
     })
+    DoseService.list().then((data)=>
+    {
+      setDoses(data);
+    })
     .finally(() => setLoading(false));
   }, []);
 
@@ -40,8 +47,8 @@ export default function VaccinationRecordPage() {
     const newRecord: VaccinationCreate = {
       personId,
       vaccineId,
-      doseId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      date:new Date(date)
+      doseId,
+      date  
     };
 
     try {
@@ -52,13 +59,13 @@ export default function VaccinationRecordPage() {
 
       setPersonId('');
       setVaccineId('');
-      setDose('1');
+      setDoseId('');
       setDate(new Date().toISOString().split('T')[0]);
 
-      toast.success("Registro de vacinação criado com sucesso!");
+      toast.success("Vaccination record created successfully!");
 
     } catch (err: any) {
-      toast.error("Erro ao criar registro de vacinação");
+      toast.error("Error creating vaccination record");
     }
   };
 
@@ -190,16 +197,17 @@ export default function VaccinationRecordPage() {
                   </label>
                   <select
                     id="dose"
-                    value={dose}
-                    onChange={(e) => setDose(e.target.value)}
+                    value={doseId}
+                    onChange={(e) => setDoseId(e.target.value)}
                     className="w-full px-4 py-3 border-2 border-[#DEE2E6] focus:border-[#307AE0] focus:outline-none transition-colors bg-white"
                     required
                   >
-                    <option value="1">1st Dose</option>
-                    <option value="2">2nd Dose</option>
-                    <option value="3">3rd Dose</option>
-                    <option value="4">4th Dose</option>
-                    <option value="5">Booster</option>
+                    <option value={""}>Select a Dose</option>
+                    {doses.map((dose) => (
+                      <option key={dose.id} value={dose.id}>
+                        {dose.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
 

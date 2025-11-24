@@ -7,13 +7,12 @@ export interface VaccinationCreate {
   personId: string;
   vaccineId: string;
   doseId: string;
-  date: Date;
-}
+  date: string;
+} 
 
-export interface Vaccination
-{
+export interface Vaccination {
     id: string;
     vaccineName: string;
-    DoseName: string;
-    date: Date;
+    dose: string;
+    date: string; 
 }

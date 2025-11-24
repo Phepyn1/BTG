@@ -6,6 +6,7 @@ export function Header() {
     { id: 'persons', label: 'Register Person' },
     { id: 'vaccine', label: 'Register Vaccine'},
     { id: 'vaccination', label: 'Register Vaccination'},
+    { id: 'viewCard', label: 'View Card'}
   ];
   const location = useLocation();
 
@@ -30,8 +31,8 @@ export function Header() {
               to = {item.id}
               className={`px-8 py-2 rounded-2px text-2xl  transition-colors ${
                 isActive(item.id)
-                  ? 'bg-[#307ae0] text-white'
-                  : 'text-blue-100 hover:text-white hover:bg-blue-600'
+                  ? 'bg-[#307ae0] text-white' 
+                  : 'text-[#b1d2ff] hover:text-white hover:bg-blue-600'
               }`}
             >
 

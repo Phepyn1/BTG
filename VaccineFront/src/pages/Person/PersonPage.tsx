@@ -34,9 +34,9 @@ export default function PersonPage() {
     try {
       await PersonService.delete(deleteId);
       setPerson(prev => prev.filter(p => p.id !== deleteId));
-      toast.success("Pessoa excluída com sucesso!");
+      toast.success("Person successfully removed!");
     } catch (error) {
-      toast.error("Erro ao excluir pessoa");
+      toast.error("Error deleting person!");
     } finally {
       setShowModal(false);
       setDeleteId(null);
@@ -48,7 +48,7 @@ export default function PersonPage() {
 
     const newPerson: PersonCreate = {
       name: personName,
-      uniqueID: personUniqueId,
+      uniqueId: personUniqueId,
     };
 
     try {
@@ -61,10 +61,10 @@ export default function PersonPage() {
       setPersonName("");
       setPersonUniqueId("");
 
-      toast.success("Pessoa cadastrada com sucesso!");
+      toast.success("Person successfully registered!");
 
     } catch (err: any) {
-      toast.error("Erro: chave já cadastrada");
+      toast.error("Error: UnicId already registered");
     }
   };
 

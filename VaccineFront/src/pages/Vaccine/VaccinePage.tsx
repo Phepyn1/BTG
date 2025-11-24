@@ -64,10 +64,10 @@ export default function VaccinePage() {
       setVaccineUniqueId("");
       setVaccineDose("");
 
-      toast.success("Vacina cadastrada com sucesso!");
+      toast.success("Vaccine successfully registered!");
 
     } catch (err: any) {
-      toast.error("Erro: ID único já cadastrado");
+      toast.error("Error: Unique ID already registered");
     }
   };
 

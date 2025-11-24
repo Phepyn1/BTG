@@ -1,15 +1,13 @@
-import type { Vaccine } from "./VaccineI"
+import type { Vaccination } from "./VaccinationI"
 
-export interface Person
-{
-    id: string,
-    name: string,
-    uniqueID: string,
-    Vaccines: Vaccine[]
+export interface Person {
+    id: string;
+    name: string;
+    uniqueID: string;         
+    vaccinations: Vaccination[]; 
 }
-
 
 export interface PersonCreate{
     name: string,
-    uniqueID: string,
+    uniqueId: string,
 }

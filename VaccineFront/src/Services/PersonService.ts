@@ -25,4 +25,10 @@ export class PersonService{
         const result = await client.DoRequest('DELETE',`${endpoint}/${Id}`);
         return result
     }
+
+    public static async getByid(Id:string)
+    {
+        const result = await client.DoRequest('GET',`${endpoint}/${Id}`);
+        return result
+    }
 }
