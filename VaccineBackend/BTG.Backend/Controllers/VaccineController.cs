@@ -9,7 +9,7 @@ public static class VaccineRoute
   
     public static void VaccineRoutes(this WebApplication app)
     {
-        var route = app.MapGroup("api/vaccine");
+        var route = app.MapGroup("api/vaccine").RequireAuthorization();
 
         route.MapGet("",async (VaccineService service) =>
         {

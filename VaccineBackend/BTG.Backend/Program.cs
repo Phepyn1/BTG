@@ -4,6 +4,7 @@ using BTG.Backend.Repositories;
 using BTG.Backend.Services;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
+using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -70,7 +71,11 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 app.UseCors("AllowFrontend");
 
-
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<BTGContext>();
+    DbSeeder.Seed(context);
+}
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -88,6 +93,7 @@ app.PersonRoutes();
 app.VaccineRoutes();
 app.VaccinationRoutes();
 app.DoseRoutes();
+app.AuthRoutes();
 app.Run();
 
 

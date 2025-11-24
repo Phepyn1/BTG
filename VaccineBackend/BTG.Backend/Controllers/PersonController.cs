@@ -9,7 +9,7 @@ public static class PersonRoute
   
     public static void PersonRoutes(this WebApplication app)
     {
-        var route = app.MapGroup("api/person");
+        var route = app.MapGroup("api/person").RequireAuthorization();
 
         route.MapGet("",async (PersonService service) =>
         {

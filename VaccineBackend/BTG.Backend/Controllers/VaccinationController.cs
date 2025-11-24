@@ -7,7 +7,7 @@ namespace BTG.Backend.Controllers;
     {
          public static void VaccinationRoutes(this WebApplication app) 
         {
-            var route = app.MapGroup("api/vaccination");
+            var route = app.MapGroup("api/vaccination").RequireAuthorization();
 
             route.MapPost("", async (CreateVaccinationDTO dto, VaccinationService service) =>
             {

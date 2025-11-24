@@ -7,7 +7,7 @@ public static class DoseController
 {
     public static void DoseRoutes(this WebApplication app)
     {
-        var route = app.MapGroup("api/dose");
+        var route = app.MapGroup("api/dose").RequireAuthorization();
 
         route.MapGet("", async (DoseService service) =>
         {
