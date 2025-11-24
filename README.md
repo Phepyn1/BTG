@@ -81,6 +81,6 @@ npm run dev
 - [x] UI matching BTG-inspired visual identity  
 
 ### **Bonus**
-- [ ] Authentication support (bonus requirement)  
+- [x] Authentication support (bonus requirement)  
 - [x] Additional validations and edge-case handling  
 - [x] Extended test coverage
