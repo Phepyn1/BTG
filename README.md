@@ -8,9 +8,35 @@ This project was developed for a technical interview at **BTG Empresas** using *
 The UI design was created using **Figma AI + Figma**, following the **BTG visual language** for layout, spacing, typography, and color structure.
 
 ---
+## 🚀 Installation
 
-## 🚀 Tech Stack
+### Prerequisites
 
+- Node.js 16.0 or higher
+- npm or yarn package manager
+- .Net 10
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Phepyn1/BTG
+cd vaccination-system
+```
+
+# Run backend (dev)
+```bash
+cd VaccineBackend
+dotnet restore
+dotnet ef database update
+dotnet run
+```
+
+# Run frontend (dev)
+```bash
+cd ../VaccineFront
+npm install
+npm run dev
+```
 ### Backend
 - C# (.NET 8)
 - Entity Framework Core
@@ -33,11 +59,11 @@ The UI design was created using **Figma AI + Figma**, following the **BTG visual
 ### **Core Features**
 - [x] Register a person   
 - [x] Register a vaccine 
-- [ ] Remove a person (cascade deletion: card + vaccinations) 
-- [ ] Register a vaccination  
-- [ ] Validate dose data  
-- [ ] List full vaccination card of a person  
-- [ ] Delete a vaccination record  
+- [x] Remove a person (cascade deletion: card + vaccinations) 
+- [x] Register a vaccination  
+- [x] Validate dose data  
+- [x] List full vaccination card of a person  
+- [x] Delete a vaccination record  
 
 ### **API & Architecture**
 - [x] RESTful API using JSON  
@@ -51,10 +77,10 @@ The UI design was created using **Figma AI + Figma**, following the **BTG visual
 - [x] API communication with Axios  
 - [x] Person management page  
 - [x] Vaccine management page  
-- [ ] Vaccination management page  
+- [x] Vaccination management page  
 - [x] UI matching BTG-inspired visual identity  
 
 ### **Bonus**
 - [ ] Authentication support (bonus requirement)  
-- [ ] Additional validations and edge-case handling  
-- [ ] Extended test coverage
+- [x] Additional validations and edge-case handling  
+- [x] Extended test coverage
