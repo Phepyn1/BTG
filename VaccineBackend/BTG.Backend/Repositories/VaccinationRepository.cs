@@ -14,10 +14,7 @@ public class VaccinationRepository : IVaccinationRepository
         _context = context;
     }
     public async Task<List<ModelVaccination>> GetAll() => await _context.Vaccination.ToListAsync();
-
-    public async Task<List<ModelVaccination>> FindAllByPersonId(Guid id) => await _context.Vaccination.Where(p => p.Id == id).ToListAsync(); 
-            
-    
+        
     public async Task<ModelVaccination?> FindById(Guid id)
     {
         var Vaccination = await _context.Vaccination.FirstOrDefaultAsync(p => p.Id == id);
@@ -44,6 +41,14 @@ public class VaccinationRepository : IVaccinationRepository
         _context.Vaccination.Remove(Vaccination);
         await _context.SaveChangesAsync();
         return Vaccination;
+    }
+
+    public async Task<bool> ExistsAsync(Guid personId, Guid vaccineId, Guid doseId)
+    {
+        return await _context.Vaccination.AnyAsync(v =>
+        v.PersonId == personId &&
+        v.VaccineId == vaccineId &&
+        v.DoseId == doseId);
     }
 }
 

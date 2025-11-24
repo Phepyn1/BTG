@@ -9,10 +9,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<VaccineService>();
 builder.Services.AddScoped<PersonService>();
+builder.Services.AddScoped<DoseService>();
 builder.Services.AddScoped<VaccinationService>();
 builder.Services.AddScoped<BTGContext>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IVaccineRepository, VaccineRepository>();
+builder.Services.AddScoped<IDoseRepository, DoseRepository>();
 builder.Services.AddScoped<IVaccinationRepository, VaccinationRepository>();
 
 builder.Services.AddCors(options =>
@@ -35,6 +37,7 @@ app.UseHttpsRedirection();
 app.PersonRoutes();
 app.VaccineRoutes();
 app.VaccinationRoutes();
+app.DoseRoutes();
 app.Run();
 
 

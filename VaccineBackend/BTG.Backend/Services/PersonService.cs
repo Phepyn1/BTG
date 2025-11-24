@@ -3,6 +3,7 @@ namespace BTG.Backend.Services;
 using BTG.Backend.entites;
 using BTG.Backend.Repositories;
 using BTG.Backend.Dtos;
+using BTG.Backend.Dtos.CardVaccine;
 
 public class PersonService
 {
@@ -20,17 +21,17 @@ public class PersonService
 
         return persons
         .Select(p => new PersonResponseDto(p.Id, p.Name, p.UniqueID))
-        .ToList(); 
+        .ToList();
     }
 
     public async Task<PersonResponseDto?> CreatePerson(CreatePersonDto dto)
     {
-        ModelPerson newPerson = new ModelPerson(dto.Name,dto.UniqueID);
+        ModelPerson newPerson = new ModelPerson(dto.Name, dto.UniqueID);
         if (await _repository.FindByUniqueId(dto.UniqueID) != null)
             return null;
         var _save = await _repository.SetPerson(newPerson);
 
-        return new PersonResponseDto(newPerson.Id, newPerson.Name,newPerson.UniqueID);
+        return new PersonResponseDto(newPerson.Id, newPerson.Name, newPerson.UniqueID);
     }
 
     public async Task<Boolean> DeletePerson(Guid id)
@@ -39,4 +40,11 @@ public class PersonService
         return _deleted is not null;
     }
 
+    public async Task<CardVaccineDto?> GetCards(Guid id)
+    {
+
+        var card = await _repository.FindAllByPersonId(id);
+        if (card == null) return null;
+        return card;
+    }
 }

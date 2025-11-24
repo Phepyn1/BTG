@@ -5,7 +5,8 @@ public record class CreateVaccinationDTO
 (
 Guid PersonId,
 Guid VaccineId,
-Guid DoseId
+Guid DoseId,
+DateOnly Date
 );
 
 public record class VaccinationResponseDTO

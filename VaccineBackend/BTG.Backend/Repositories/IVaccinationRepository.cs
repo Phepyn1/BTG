@@ -7,8 +7,9 @@ namespace BTG.Backend.Repositories
     {
         Task<List<ModelVaccination>> GetAll();
         Task<ModelVaccination?> FindById(Guid id);
-        Task<List<ModelVaccination>> FindAllByPersonId(Guid id);
         Task<ModelVaccination> SetVaccination(ModelVaccination Vaccination);
         Task<ModelVaccination?> DeleteVaccination(Guid id);
+        Task<bool> ExistsAsync(Guid personId, Guid vaccineId, Guid doseId);
+
     }
 }

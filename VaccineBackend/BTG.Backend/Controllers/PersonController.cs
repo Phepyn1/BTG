@@ -17,7 +17,12 @@ public static class PersonRoute
             if(!personsList.Any()){return Results.BadRequest("Lista vazia!");}
             return Results.Ok(personsList);   
         });
+        route.MapGet("{id:guid}", async (Guid id, PersonService service) =>
+        {
+            var getCard = await service.GetCards(id);
+            return Results.Ok(getCard);
 
+        });
         route.MapPost("",  async (CreatePersonDto personDto, PersonService service) =>
         {
            var createPerson = await service.CreatePerson(personDto);
@@ -33,6 +38,8 @@ public static class PersonRoute
         ? Results.NoContent()
             : Results.NotFound("Person not found");
         });
+
+
 
 
     }
