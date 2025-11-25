@@ -20,12 +20,14 @@ The UI design was created using **Figma AI + Figma**, following the **BTG visual
 
 ```bash
 git clone https://github.com/Phepyn1/BTG
-cd vaccination-system
+cd BTG
 ```
 
 # Run backend (dev)
 ```bash
-cd VaccineBackend
+
+cd BTG
+cd VaccineBackend/BTG.backend
 dotnet restore
 dotnet ef database update
 dotnet run
@@ -33,12 +35,13 @@ dotnet run
 
 # Run frontend (dev)
 ```bash
+cd BTG
 cd ../VaccineFront
 npm install
 npm run dev
 ```
 ### Backend
-- C# (.NET 8)
+- C# (.NET 10)
 - Entity Framework Core
 - SQLite
 - xUnit
