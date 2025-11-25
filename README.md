@@ -25,8 +25,9 @@ cd BTG
 
 # Run backend (dev)
 ```bash
+
 cd BTG
-cd BTG/VaccineBackend/BTG.backend
+cd VaccineBackend/BTG.backend
 dotnet restore
 dotnet ef database update
 dotnet run
