@@ -1,11 +1,4 @@
 # BTG Vaccination Card System
-## 📑 Table of Contents
-- [Overview](#Overview)
-- [Access Credentials](#access-credentials)
-- [Tech Stack](#tech-stack)
-- [Quick Start](#quick-start)
-- [Features](#features)
-- [Folder Structure](#folder-structure)
 
 ---
 
