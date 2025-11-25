@@ -1,5 +1,16 @@
 # BTG Vaccination Card System
+## 📑 Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Architecture](#architecture)
+- [API Examples](#api-examples)
+- [Quick Start](#Installation)
+- [Tech Stack](#tech-stack)
+- [Folder Structure](#folder-structure)
 
+---
+
+## 📘 Overview
 A RESTful system for managing vaccination records.  
 It allows registering people, vaccines, and vaccination entries, as well as viewing and deleting vaccination cards.
 
@@ -8,7 +19,7 @@ This project was developed for a [technical interview](docs/CartãodeVacinação
 The UI design was created using **Figma AI + Figma**, following the **BTG visual language** for layout, spacing, typography, and color structure.
 
 ---
-⚠️ ACCESS CREDENTIALS
+##⚠️ ACCESS CREDENTIALS
 To access the system, use the following credentials:
 
 Username: administrator
@@ -16,7 +27,28 @@ Username: administrator
 Password: 123
 
 ---
-## 🚀 Installation
+
+##🧰 tech-stack
+
+### Backend
+- C# (.NET 10)
+- Entity Framework Core
+- SQLite
+- xUnit
+
+### Frontend
+- TypeScript
+- Vite
+- TailwindCSS
+
+### Design
+- Figma AI + Figma  
+- Interface aligned with BTG's visual identity
+
+---
+
+
+## 🚀 Quick-Start
 
 ### Prerequisites
 
@@ -48,20 +80,34 @@ cd ../VaccineFront
 npm install
 npm run dev
 ```
-### Backend
-- C# (.NET 10)
-- Entity Framework Core
-- SQLite
-- xUnit
+---
 
-### Frontend
-- TypeScript
-- Vite
-- TailwindCSS
+## ✅ Features
 
-### Design
-- Figma AI + Figma  
-- Interface aligned with BTG's visual identity
+### **Core**
+- Create a person  
+- Create a vaccine  
+- Create a vaccination record  
+- Delete a person (cascade deletion: card + vaccinations)  
+- Validate vaccination/dose data  
+- Retrieve full vaccination card  
+- Delete a vaccination entry  
+
+### **Architecture & API**
+- RESTful JSON API  
+- Clean structure: Controller → Service → Repository → Database  
+- Input/output DTOs  
+- EF Core entity configuration  
+- Database migrations  
+- Route namespace under `/api/*`  
+
+
+### **Frontend**
+- Axios API communication  
+- Person management page  
+- Vaccine management page  
+- Vaccination management page  
+- BTG-styled UI design  
 
 ---
 
@@ -96,6 +142,31 @@ npm run dev
 - [x] Additional validations and edge-case handling  
 - [x] Extended test coverage
  
+---
+
+##📂 Folder Structure
+
+```
+BTG/
+ ├── VaccineBackend/
+ │   └── BTG.Backend/
+ │       ├── Controllers/
+ │       ├── Services/
+ │       ├── Repositories/
+ │       ├── Entities/
+ │       ├── Dtos/
+ │       ├── Migrations/
+ │       └── Program.cs
+ └── VaccineFront/
+     ├── src/
+     │   ├── pages/
+     │   ├── components/
+     │   ├── routes/
+     │   ├── services/
+     │   └── styles/
+     └── index.html
+```
+
 ---
 
 ## 📋 Implementation Plan:
