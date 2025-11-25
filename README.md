@@ -11,16 +11,16 @@ This project was developed for a [technical interview](docs/CartãodeVacinação
 The UI design was created using **Figma AI + Figma**, following the **BTG visual language** for layout, spacing, typography, and color structure.
 
 ---
-##⚠️ ACCESS CREDENTIALS
+## ⚠️ ACCESS CREDENTIALS
 To access the system, use the following credentials:
 
-Username: administrator
+Username: admin
 
 Password: 123
 
 ---
 
-##🧰 tech-stack
+## 🧰 tech-stack
 
 ### Backend
 - C# (.NET 10)
@@ -59,12 +59,15 @@ cd BTG
 
 # Run backend (dev)
 ```bash
-
 cd BTG
 cd VaccineBackend/BTG.backend
 dotnet restore
 dotnet ef database update
 dotnet run
+```
+# Access Swagger
+```bash
+http://localhost:5238/swagger
 ```
 
 # Run frontend (dev)
@@ -74,6 +77,11 @@ cd VaccineFront
 npm install
 npm run dev
 ```
+# Access Page
+```bash
+http://localhost:5173/
+```
+
 ---
 
 ## ✅ Features
@@ -138,7 +146,7 @@ npm run dev
  
 ---
 
-##📂 Folder Structure
+## 📂 Folder Structure
 
 ```
 BTG/
