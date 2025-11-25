@@ -9,7 +9,9 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var key = builder.Configuration["Jwt:Key"];
+
+var keyString ="Jwt:Key" ?? throw new Exception("JWT Key missing");
+var key = builder.Configuration["Jwt:Key"] ;
 var issuer = builder.Configuration["Jwt:Issuer"];
 
 builder.Services
@@ -24,6 +26,7 @@ builder.Services
             ValidateIssuerSigningKey = true,
             ValidIssuer = issuer,
             IssuerSigningKey = new SymmetricSecurityKey(
+                
                 Encoding.UTF8.GetBytes(key)
             )
         };
@@ -62,7 +65,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 
-    // Permite mostrar comentários XML
+    // Permite mostrar comentï¿½rios XML
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     if (File.Exists(xmlPath))

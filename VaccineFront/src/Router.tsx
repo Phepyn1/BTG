@@ -15,7 +15,7 @@ const Router = () => {
     return(
     <Routes>    
     <Route path="/" element={<HomePage />}/>
-    <Route path='/persons' element={<PrivateRoute><PersonPage/><PersonPage/></PrivateRoute>}/>
+    <Route path='/persons' element={<PrivateRoute><PersonPage/></PrivateRoute>}/>
     <Route path='/vaccine' element={<PrivateRoute><VaccinePage/></PrivateRoute>}/>
     <Route path='/vaccination' element={<PrivateRoute><VaccinationRecordPage/></PrivateRoute>}/>
     <Route path='/viewCard' element={<PrivateRoute><VaccinationCard/></PrivateRoute>}/>
