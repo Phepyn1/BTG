@@ -52,6 +52,8 @@ Password: 123
 
 ```bash
 git clone https://github.com/Phepyn1/BTG
+```
+```bash
 cd BTG
 ```
 
