@@ -8,6 +8,14 @@ This project was developed for a [technical interview](docs/CartãodeVacinação
 The UI design was created using **Figma AI + Figma**, following the **BTG visual language** for layout, spacing, typography, and color structure.
 
 ---
+⚠️ ACCESS CREDENTIALS
+To access the system, use the following credentials:
+
+Username: administrator
+
+Password: 123
+
+---
 ## 🚀 Installation
 
 ### Prerequisites
