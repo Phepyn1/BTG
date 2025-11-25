@@ -25,7 +25,7 @@ cd vaccination-system
 
 # Run backend (dev)
 ```bash
-cd VaccineBackend
+cd VaccineBackend/BTG.backend
 dotnet restore
 dotnet ef database update
 dotnet run
@@ -38,7 +38,7 @@ npm install
 npm run dev
 ```
 ### Backend
-- C# (.NET 8)
+- C# (.NET 10)
 - Entity Framework Core
 - SQLite
 - xUnit
