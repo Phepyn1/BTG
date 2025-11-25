@@ -22,7 +22,8 @@ public static class DbSeeder
             context.Vaccine.AddRange(
                 new ModelVaccine("Coronavac", " U11.9", 5),
                 new ModelVaccine("Influenza", "J11.1", 5),
-                new ModelVaccine("BCG", "Z23.2", 5));
+                new ModelVaccine("BCG", "Z23.2", 5)
+                );
             context.SaveChanges();
         }
         context.SaveChanges();

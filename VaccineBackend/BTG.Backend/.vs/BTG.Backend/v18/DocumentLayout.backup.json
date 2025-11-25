@@ -146,8 +146,7 @@
               "RelativeToolTip": "Exceptions\\AlreadyExistsException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T22:10:13.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T22:10:13.879Z"
             },
             {
               "$type": "Document",
@@ -159,8 +158,7 @@
               "RelativeToolTip": "Exceptions\\NotFoundException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T22:09:45.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T22:09:45.799Z"
             },
             {
               "$type": "Document",
@@ -172,8 +170,7 @@
               "RelativeToolTip": "Services\\VaccinationService.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAjwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:43:17.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T19:43:17.48Z"
             },
             {
               "$type": "Document",
@@ -185,8 +182,7 @@
               "RelativeToolTip": "Controllers\\VaccinationController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAwCgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:43:55.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T19:43:55.213Z"
             },
             {
               "$type": "Document",
@@ -204,15 +200,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BTG.Backend",
+              "Title": "BTG.Backend.csproj",
               "DocumentMoniker": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\BTG.Backend.csproj",
               "RelativeDocumentMoniker": "BTG.Backend.csproj",
               "ToolTip": "C:\\Users\\renan\\Desktop\\BTG_VACCINE\\VaccineBackend\\BTG.Backend\\BTG.Backend.csproj",
               "RelativeToolTip": "BTG.Backend.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-24T22:08:38.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T22:08:38.211Z"
             },
             {
               "$type": "Document",
@@ -392,8 +387,7 @@
               "RelativeToolTip": "Services\\DoseService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T19:54:32.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T19:54:32.864Z"
             },
             {
               "$type": "Document",
