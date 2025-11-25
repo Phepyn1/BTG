@@ -68,7 +68,7 @@ dotnet run
 # Run frontend (dev)
 ```bash
 cd BTG
-cd ../VaccineFront
+cd VaccineFront
 npm install
 npm run dev
 ```
@@ -147,6 +147,8 @@ BTG/
  │       ├── Repositories/
  │       ├── Entities/
  │       ├── Dtos/
+ │       ├── Exception/
+ │       ├── Utils/
  │       ├── Migrations/
  │       └── Program.cs
  └── VaccineFront/
@@ -155,6 +157,7 @@ BTG/
      │   ├── components/
      │   ├── routes/
      │   ├── services/
+     │   ├── Utils/
      │   └── styles/
      └── index.html
 ```
