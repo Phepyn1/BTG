@@ -95,3 +95,14 @@ npm run dev
 - [x] Authentication support (bonus requirement)  
 - [x] Additional validations and edge-case handling  
 - [x] Extended test coverage
+
+📋 Implementation Plan:
+- Add a page to create, edit, and remove doses.
+
+- Implement a business rule in the backend to control the maximum number of doses per vaccine.
+
+- Create a user registration page.
+
+- Create a `User` table in the backend.
+
+- Implement authentication: password hashing, login, validation, and JWT issuance.
